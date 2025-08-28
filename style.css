@@ -22,9 +22,10 @@ body {
   text-align: right;
   border: none;
   outline: none;
-  padding: 10px;
+  padding: 15px;   /* 🔥 extra padding to avoid number cut */
   background: #222233;
   color: #fff;
+  box-sizing: border-box; /* padding + width fix */
 }
 
 .buttons {

@@ -19,3 +19,18 @@ function calculate() {
     display.value = "Error";
   }
 }
+
+// 🔹 Keyboard support
+document.addEventListener("keydown", function(event) {
+  const key = event.key;
+
+  if (!isNaN(key) || ["+", "-", "*", "/", "%", "."].includes(key)) {
+    appendChar(key);
+  } else if (key === "Enter" || key === "=") {
+    calculate();
+  } else if (key === "Backspace") {
+    deleteChar();
+  } else if (key.toLowerCase() === "c") {
+    clearDisplay();
+  }
+});
